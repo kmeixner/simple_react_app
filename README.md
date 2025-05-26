@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Structure
+
+- README.md : this README file
+- node_modules/ : (do not commit) generated Node modules (eg: npm install upper-case)
+- package-lock.json : (should be committed) contains metadata about project and its dependencies
+- package.json : (should be committed) ensures exact versions of all dependencies installed, for reproducible builds.
+- public/ : holds static assets like the index.html file and the favicon
+- src/ : source code my React components and application logic
+
 ## Available Scripts
 
 In the project directory, you can run:
