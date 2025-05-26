@@ -10,6 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - package.json : (should be committed) ensures exact versions of all dependencies installed, for reproducible builds.
 - public/ : holds static assets like the index.html file and the favicon
 - src/ : source code my React components and application logic
+- src/App.js : main app
 
 ## Available Scripts
 
