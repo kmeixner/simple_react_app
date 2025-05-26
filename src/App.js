@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+/* import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -10,3 +10,7 @@ function App() {
 }
 
 export default App;
+*/
+// KM Note: Tutorial entry point is index.js,
+// commented this file out to avoid confusion
+// since this file does nothing right now
