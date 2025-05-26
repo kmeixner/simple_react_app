@@ -89,11 +89,27 @@ function Car() {
 const myElement = <Car />
 */
 
+/*
 // eg 13: Passing props to componeents:
 function Car(props) {
   return <h2>I am a {props.color} Car!</h2>;
 }
 const myElement = <Car color="red" />
+*/
+
+// eg: 14: Components in components:
+function Car() {
+  return <h2>I am a Car!</h2>;
+}
+function Garage() {
+  return (
+    <>
+      <h1>Who lives in my Garage?</h1>
+      <Car />
+    </>
+  );
+}
+const myElement = <Garage />
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
