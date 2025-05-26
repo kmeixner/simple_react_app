@@ -10,7 +10,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - package.json : (should be committed) ensures exact versions of all dependencies installed, for reproducible builds.
 - public/ : holds static assets like the index.html file and the favicon
 - src/ : source code my React components and application logic
-- src/App.js : main app
+- src/App.js : for component logic
+- src/index.js : for the entry point and rendering setup
+
+Notes:
+- App.js : main component of your React application, containing the structure and logic for your app's user interface. It defines the layout, components, and functionality of the app.
+- index.js : acts as the entry point for your React application. It sets up the rendering process and attaches the root component (usually App.js) to the HTML document. It initializes the React DOM and provides the initial rendering of your app.
+
+While App.js focuses on the component logic, index.js is responsible for rendering the root component and setting up the application's initial state and rendering process.
 
 ## Available Scripts
 
