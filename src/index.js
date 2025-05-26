@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 
 // Note comment all but desired example below to see it work:
 
+// *** A) REACT BASICS: ***
+
 // eg 1:
 //const myElement = <h1>Hello World!</h1>
 
@@ -59,9 +61,39 @@ if (x < 10) {
 const myElement = <h1>{text}</h1>;
 */
 
+/*
 // eg 9: contitionals - ternary form:
 const x = 5;
 const myElement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>;
+*/
+
+// *** B) DEFINITING COMPONENTS: ***
+
+/*
+// eg 11: (Obsolete) Define Component the old way (Component format):
+// *!* Components defined this way CANNOT USE HOOKS! *!*
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
+const myElement = <Car />
+*/
+
+/*
+// eg 12: Define a Function Component the new way (function component)
+// TIP: Function Components defined this way CAN use hooks
+function Car() {
+  return <h2>Hi, I am a Car!</h2>;
+}
+const myElement = <Car />
+*/
+
+// eg 13: Passing props to componeents:
+function Car(props) {
+  return <h2>I am a {props.color} Car!</h2>;
+}
+const myElement = <Car color="red" />
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
