@@ -9,6 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - package-lock.json : (should be committed) contains metadata about project and its dependencies
 - package.json : (should be committed) ensures exact versions of all dependencies installed, for reproducible builds.
 - public/ : holds static assets like the index.html file and the favicon
+- public/index.html : holds the <div> with id=root where the React App is rendered
 - src/ : source code my React components and application logic
 - src/App.js : for component logic
 - src/index.js : for the entry point and rendering setup
