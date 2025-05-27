@@ -155,6 +155,7 @@ const myElement = <Garage />;
 
 // eg 19: passing an object (CarInfo{}) into props:
 // (Note: created a second <Car2 /> to avoid name conflict with earlier examples)
+// *!* React Props are READ-ONLY! You will get an error if you try to change their value. *!*
 function Garage() {
   const carInfo = { name: "Ford", model: "Mustang" };
   return (
@@ -165,6 +166,7 @@ function Garage() {
   );
 }
 const myElement = <Garage />;
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
