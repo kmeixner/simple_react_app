@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { useState } from 'react';
 import Car from './Car.js';
 import Car2 from './Car2.js';
 
@@ -327,6 +328,7 @@ function Garage() {
 const myElement = <Garage />
 */
 
+/*
 // eg 29: Basic form:
 // This will work as normal, the form will submit and the page will refresh.
 // But this is generally not what we want to happen in React.
@@ -336,6 +338,26 @@ function MyForm() {
     <form>
       <label>Enter your name:
         <input type="text" />
+      </label>
+    </form>
+  )
+}
+const myElement = <MyForm />
+*/
+
+// eg 30: Use the useState Hook to manage the input:
+// *!* Requires: import { useState } from 'react'; *!*
+function MyForm() {
+  const [name, setName] = useState("");
+
+  return (
+    <form>
+      <label>Enter your name:
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
       </label>
     </form>
   )
