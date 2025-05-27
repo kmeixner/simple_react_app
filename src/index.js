@@ -114,9 +114,41 @@ function Garage() {
 const myElement = <Garage />
 */
 
-// eg: 15: Define component in external file:
+/*
+// eg 15: Define component in external file:
 // <Car /> is defined in ./Car.js and included via import Car from './Car.js';
 const myElement = <Car />
+*/
+
+/*
+// eg 16: props with <Car /> from external file:
+const myElement = <Car brand="Ford" />;
+*/
+
+/*
+// eg 17: Passing data from <Car /> to Garage via props:
+function Garage() {
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <Car brand="Ford" />
+    </>
+  );
+}
+const myElement = <Garage />;
+*/
+
+// eg 18: Passing a variable rather than a srring:
+function Garage() {
+  const carName = "Ford";
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <Car brand={ carName } />
+    </>
+  );
+}
+const myElement = <Garage />;
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
