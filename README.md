@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+# Simple React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple react app that I created for learning and reference purposes.
+
+It has many examples in index.js based on the React tutorial
+at https://www.w3schools.com/react/default.asp .
+Some examples have had names of components, etc., altered slightly.
+The examples in index.js can be commented/uncommented to see them work.
+
+Note: This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Project Structure
 
