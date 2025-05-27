@@ -368,6 +368,7 @@ function MyForm() {
 const myElement = <MyForm />
 */
 
+/*
 // eg 31: control the submit action by adding an event handler
 // in the onSubmit attribute for the <form>:
 function MyForm() {
@@ -388,6 +389,51 @@ function MyForm() {
         />
       </label>
       <input type="submit" />
+    </form>
+  )
+}
+const myElement = <MyForm />
+*/
+
+// eg 32: Form with multiple inputs:
+//
+// Tip: We use the same event handler function for both input fields,
+// we could write one event handler for each,
+// but this gives us much cleaner code
+// and is the preferred way in React.
+function MyForm() {
+  const [inputs, setInputs] = useState({});
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values, [name]: value}))
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(inputs);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>Enter your name:
+      <input
+        type="text"
+        name="username"
+        value={inputs.username || ""}
+        onChange={handleChange}
+      />
+      </label>
+      <label>Enter your age:
+        <input
+          type="number"
+          name="age"
+          value={inputs.age || ""}
+          onChange={handleChange}
+        />
+        </label>
+        <input type="submit" />
     </form>
   )
 }
