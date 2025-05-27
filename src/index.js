@@ -254,6 +254,7 @@ const cars = ['Ford', 'BMW', 'Audi'];
 const myElement = <Garage cars={cars} />;
 */
 
+/*
 // eg 25: ternary condition (x ? output if true : output if false):
 function MissedGoal() {
   return <h1>MISSED!</h1>;
@@ -270,6 +271,23 @@ function Goal(props) {
   );
 }
 const myElement = <Goal isGoal={false} />
+*/
+
+// *** E) Lists: ***
+
+// eg 26: render all of the cars from garage into a list:
+function Garage() {
+  const cars = ['Ford', 'BMW', 'Audi'];
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <ul>
+        {cars.map((car) => <Car brand={car} />)}
+      </ul>
+    </>
+  );
+}
+const myElement = <Garage />
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
