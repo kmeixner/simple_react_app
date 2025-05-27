@@ -3,7 +3,14 @@ import ReactDOM from 'react-dom/client';
 import Car from './Car.js';
 import Car2 from './Car2.js';
 
-// Note ignore warnings about unused files,
+// Note: this examples are from
+// https://www.w3schools.com/react/default.asp
+// but some have been altered to avoid name conflicts
+// as the examples are commented/uncommented to prevent
+// name conflicts. Only one example should be uncommented
+// at a time.
+
+// Note: ignore warnings about unused files,
 // as you comment/uncomment the examples you will need the
 // unused files sometimes for some examples.
 
@@ -298,6 +305,7 @@ function Garage() {
 const myElement = <Garage />
 */
 
+/*
 // eg 28: render all of the cars from garage into a list:
 // (TIP: This is correct since each child in the list has
 // a unique "key" prop)
@@ -317,6 +325,24 @@ function Garage() {
   );
 }
 const myElement = <Garage />
+*/
+
+// eg 29: Basic form:
+// This will work as normal, the form will submit and the page will refresh.
+// But this is generally not what we want to happen in React.
+// We want to prevent this default behavior and let React control the form.
+function MyForm() {
+  return (
+    <form>
+      <label>Enter your name:
+        <input type="text" />
+      </label>
+    </form>
+  )
+}
+const myElement = <MyForm />
+
+// *** F) Forms: ***
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
