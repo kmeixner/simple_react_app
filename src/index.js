@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import Car from './Car.js';
 import Car2 from './Car2.js';
 
+// Note ignore warnings about unused files,
+// as you comment/uncomment the examples you will need the
+// unused files sometimes for some examples.
+
 // Note comment all but desired example below to see it work:
 
 // *** A) REACT BASICS: ***
