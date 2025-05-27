@@ -153,6 +153,7 @@ function Garage() {
 const myElement = <Garage />;
 */
 
+/*
 // eg 19: passing an object (CarInfo{}) into props:
 // (Note: created a second <Car2 /> to avoid name conflict with earlier examples)
 // *!* React Props are READ-ONLY! You will get an error if you try to change their value. *!*
@@ -166,7 +167,53 @@ function Garage() {
   );
 }
 const myElement = <Garage />;
+*/
 
+// *** C) Events: ***
+
+/*
+// eg 20: onClick: (<-note the camel case)
+function Football() {
+  const shoot = () => {
+    alert("Great Shot!");
+  }
+
+  return (
+    <button onClick={shoot}>Take the shot!</button>
+  );
+}
+const myElement = <Football />;
+*/
+
+/*
+// eg 21: passing arguments:
+function Football() {
+  const shoot = (a) => {
+    alert(a);
+  }
+
+  return (
+    <button onClick={() => shoot("Goal!")}>Take the shot!</button>
+  );
+}
+const myElement = <Football />;
+*/
+
+// eg: 22: Using the React event handler:
+function Football() {
+  const shoot = (a, b) => {
+    alert(b.type);
+    /*
+    'b' represents the React event that triggered the function,
+    in this case the 'click' event
+    */
+  }
+
+  return (
+    <button onClick={(event) => shoot("Goal!", event)}>Take the shot!</button>
+  );
+}
+const myElement = <Football />;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
