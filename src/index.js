@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Car from './Car.js';
 
 // Note comment all but desired example below to see it work:
 
@@ -72,33 +73,34 @@ const myElement = <h1>{(x) < 10 ? "Hello" : "Goodbye"}</h1>;
 /*
 // eg 11: (Obsolete) Define Component the old way (Component format):
 // *!* Components defined this way CANNOT USE HOOKS! *!*
-class Car extends React.Component {
+class Vehicle extends React.Component {
   render() {
     return <h2>Hi, I am a Car!</h2>;
   }
 }
-const myElement = <Car />
+const myElement = <Vehicle />
 */
 
 /*
 // eg 12: Define a Function Component the new way (function component)
 // TIP: Function Components defined this way CAN use hooks
-function Car() {
+function Vehicle() {
   return <h2>Hi, I am a Car!</h2>;
 }
-const myElement = <Car />
+const myElement = <Vehicle />
 */
 
 /*
 // eg 13: Passing props to componeents:
-function Car(props) {
+function Vehicle(props) {
   return <h2>I am a {props.color} Car!</h2>;
 }
-const myElement = <Car color="red" />
+const myElement = <Vehicle color="red" />
 */
 
+/*
 // eg: 14: Components in components:
-function Car() {
+function Vehicle() {
   return <h2>I am a Car!</h2>;
 }
 function Garage() {
@@ -110,6 +112,11 @@ function Garage() {
   );
 }
 const myElement = <Garage />
+*/
+
+// eg: 15: Define component in external file:
+// <Car /> is defined in ./Car.js and included via import Car from './Car.js';
+const myElement = <Car />
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
