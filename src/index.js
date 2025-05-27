@@ -328,6 +328,8 @@ function Garage() {
 const myElement = <Garage />
 */
 
+// *** F) Forms: ***
+
 /*
 // eg 29: Basic form:
 // This will work as normal, the form will submit and the page will refresh.
@@ -345,6 +347,7 @@ function MyForm() {
 const myElement = <MyForm />
 */
 
+/*
 // eg 30: Use the useState Hook to manage the input:
 // *!* Requires: import { useState } from 'react'; *!*
 function MyForm() {
@@ -363,8 +366,32 @@ function MyForm() {
   )
 }
 const myElement = <MyForm />
+*/
 
-// *** F) Forms: ***
+// eg 31: control the submit action by adding an event handler
+// in the onSubmit attribute for the <form>:
+function MyForm() {
+  const [name, setName] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`The name you entered was: ${name}`)
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>Enter your name:
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
+      <input type="submit" />
+    </form>
+  )
+}
+const myElement = <MyForm />
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
