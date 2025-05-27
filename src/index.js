@@ -215,6 +215,9 @@ function Football() {
 const myElement = <Football />;
 */
 
+// *** D) Conditionals: ***
+
+/*
 // eg: 23: component that chooses which component to render based on a condition:
 function MissedGoal() {
   return <h1>MISSED!</h1>;
@@ -228,6 +231,43 @@ function Goal(props) {
     return <MadeGoal/>;
   }
   return <MissedGoal/>;
+}
+const myElement = <Goal isGoal={false} />
+*/
+
+/*
+// eg 24: Logical && Operator for conditional rendering:
+function Garage(props) {
+  const cars = props.cars;
+  return (
+    <>
+      <h1>Garage</h1>
+      {cars.length > 0 &&
+        <h2>
+          You have {cars.length} cars in your garage.
+        </h2>
+      }
+    </>
+  );
+}
+const cars = ['Ford', 'BMW', 'Audi'];
+const myElement = <Garage cars={cars} />;
+*/
+
+// eg 25: ternary condition (x ? output if true : output if false):
+function MissedGoal() {
+  return <h1>MISSED!</h1>;
+}
+function MadeGoal() {
+  return <h1>Goal!</h1>;
+}
+function Goal(props) {
+  const isGoal = props.isGoal;
+  return (
+    <>
+      { isGoal ? <MadeGoal/> : <MissedGoal/> }
+    </>
+  );
 }
 const myElement = <Goal isGoal={false} />
 
