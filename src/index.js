@@ -199,6 +199,7 @@ function Football() {
 const myElement = <Football />;
 */
 
+/*
 // eg: 22: Using the React event handler:
 function Football() {
   const shoot = (a, b) => {
@@ -212,6 +213,23 @@ function Football() {
   );
 }
 const myElement = <Football />;
+*/
+
+// eg: 23: component that chooses which component to render based on a condition:
+function MissedGoal() {
+  return <h1>MISSED!</h1>;
+}
+function MadeGoal() {
+  return <h1>Goal!</h1>;
+}
+function Goal(props) {
+  const isGoal = props.isGoal;
+  if (isGoal) {
+    return <MadeGoal/>;
+  }
+  return <MissedGoal/>;
+}
+const myElement = <Goal isGoal={false} />
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
