@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Car from './Car.js';
+import Car2 from './Car2.js';
 
 // Note comment all but desired example below to see it work:
 
@@ -138,6 +139,7 @@ function Garage() {
 const myElement = <Garage />;
 */
 
+/*
 // eg 18: Passing a variable rather than a srring:
 function Garage() {
   const carName = "Ford";
@@ -149,7 +151,20 @@ function Garage() {
   );
 }
 const myElement = <Garage />;
+*/
 
+// eg 19: passing an object (CarInfo{}) into props:
+// (Note: created a second <Car2 /> to avoid name conflict with earlier examples)
+function Garage() {
+  const carInfo = { name: "Ford", model: "Mustang" };
+  return (
+    <>
+      <h1>Who lives in my garage?</h1>
+      <Car2 brand={ carInfo } />
+    </>
+  );
+}
+const myElement = <Garage />;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(myElement);
